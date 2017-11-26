@@ -1,0 +1,62 @@
+menu "User Configuration"
+
+choice WIFI_MODE_TYPE
+    prompt "WIFI mode"
+    default WIFI_MODE_TYPE_STA
+    help
+	    WIFI Mode: STA/AP/STA+AP.
+
+config WIFI_MODE_TYPE_STA
+    bool "STA"
+config WIFI_MODE_TYPE_AP
+    bool "AP"
+config WIFI_MODE_TYPE_STA_AP
+    bool "STA_AP"
+endchoice
+
+
+config STA_SSID
+    string "STA WIFI SSID"
+    default "test_ssid"
+    depends on WIFI_MODE_TYPE_STA||WIFI_MODE_TYPE_STA_AP
+    help
+        SSID For STA Mode.
+
+config STA_PASSWORD
+    string "STA WIFI PASSWORD"
+    default "test1234"
+    depends on WIFI_MODE_TYPE_STA||WIFI_MODE_TYPE_STA_AP
+    help
+        Password for STA Mode.
+
+config AP_SSID
+    string "AP WIFI SSID"
+    default "test_wifi"
+    depends on WIFI_MODE_TYPE_AP||WIFI_MODE_TYPE_STA_AP
+    help
+        SSID For AP Mode.
+
+config AP_PASSWORD
+    string "AP WIFI PASSWORD"
+    default "test1234"
+    depends on WIFI_MODE_TYPE_AP||WIFI_MODE_TYPE_STA_AP
+    help
+        Password for AP Mode.
+
+config AP_CHANNEL
+    int "AP WIFI Channel(0~13)"
+    default 3
+    range 0 13
+    depends on WIFI_MODE_TYPE_AP||WIFI_MODE_TYPE_STA_AP
+    help
+        the ap channel
+
+config AP_MAX_CONNECT
+    int "Max station connections allowed"
+    default 4
+    range 0 10
+    depends on WIFI_MODE_TYPE_AP||WIFI_MODE_TYPE_STA_AP
+    help
+        the max station allow connect to the ap
+
+endmenu

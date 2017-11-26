@@ -1,0 +1,24 @@
+.config
+*.o
+*.pyc
+
+# gtags
+GTAGS
+GRTAGS
+GPATH
+
+# emacs
+.dir-locals.el
+
+# emacs temp file suffixes
+*~
+.#*
+\#*#
+
+# eclipse setting
+.settings
+
+# project files
+sdkconfig
+sdkconfig.old
+build
