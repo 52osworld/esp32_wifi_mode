@@ -26,7 +26,7 @@ void app_main()
 
   ESP_LOGI(TAG, "Opening file");
 
-	ESP_LOGI(TAG, "\r\n\r\n-------------------------------------------------\r\n\r\n");
+  ESP_LOGI(TAG, "\r\n\r\n-------------------------------------------------\r\n\r\n");
   ESP_LOGI(TAG, "FLASH SIZE: %s  %d MB  \r\n", (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external",
 												spi_flash_get_chip_size() / (1024 * 1024));
   ESP_LOGI(TAG, "Free memory: %d bytes \r\n", esp_get_free_heap_size());
