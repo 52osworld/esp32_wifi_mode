@@ -7,7 +7,7 @@ ESP32 Wifi Mode: STA/AP/STA+AP
 
 > git submodule update --init --recursive
 
-#  Wifi config
+# Wifi config
 
 > make menuconfig
 
@@ -23,7 +23,7 @@ ESP32 Wifi Mode: STA/AP/STA+AP
 
 ![wifi config](./docs/WifiConfig.png)
 
-# 3 Build & Flash
+# Build & Flash
 
 > make  
 > make flash
