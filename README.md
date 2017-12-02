@@ -1,23 +1,29 @@
-# 1 Brief
+# Brief
 ESP32 Wifi Mode: STA/AP/STA+AP
 
-# 2 Wifi config
+# Get source code
+
+> git clone https://github.com/52osworld/esp32_wifi_mode.git
+
+> git submodule update --init --recursive
+
+#  Wifi config
 
 > make menuconfig
 
-2.1 User Configuration  --->
+## User Configuration
 
 ![user config](./docs/UserConfig.png)
 
-2.2 Config Wifi Mode:
+## Config Wifi Mode:
 
 ![wifi mode select](./docs/WifiModeSelect.png)
 
-2.3 set the sta/ap ssid&password
+## set the sta/ap ssid & password
 
 ![wifi config](./docs/WifiConfig.png)
 
-# 3 Build&Flash
+# 3 Build & Flash
 
 > make  
 > make flash
